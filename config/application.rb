@@ -16,5 +16,6 @@ module MonkaRailsbasic
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
     config.generators.system_tests = nil
+    config.time_zone = 'Sapporo' #追加
   end
 end
