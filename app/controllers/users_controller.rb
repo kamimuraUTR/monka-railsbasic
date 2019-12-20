@@ -69,6 +69,7 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:name, :phone_number)
+      params.require(:user).permit(:name, :phone_number, :photo)
+      #paramsはuserのnameとphone_numberとphotoの値があることだけを許可している
     end
 end
