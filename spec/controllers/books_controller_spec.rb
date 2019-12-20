@@ -49,14 +49,6 @@ RSpec.describe BooksController, type: :controller do
     end
   end
 
-  describe "GET #show" do
-    it "returns a success response" do
-      book = Book.create! valid_attributes
-      get :show, params: {id: book.to_param}, session: valid_session
-      expect(response).to be_successful
-    end
-  end
-
   describe "GET #new" do
     it "returns a success response" do
       get :new, params: {}, session: valid_session
