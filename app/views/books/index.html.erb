@@ -13,6 +13,7 @@
       <th>Price</th>
       <th>Displayed</th>
       <th>Created_at</th>
+      <th>Reviews</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -29,10 +30,11 @@
         </td>
         <td><%= book.title %></td>
         <td><%= book.author %></td>
-        <td><%= book.published_on %></td>
+        <td><%= format_datetime book.published_on %></td>
         <td><%= book.price %></td>
         <td><%= book.displayed %></td>
-        <td><%= book.created_at %></td>
+        <td><%= format_datetime book.created_at %></td>
+        <td><%= book.reviews.count %></td>
         <td><%= link_to 'Edit', edit_book_path(book) %></td>
         <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

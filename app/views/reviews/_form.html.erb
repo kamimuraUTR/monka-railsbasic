@@ -28,7 +28,8 @@
 
   <div class="field">
     <%= form.label :book_id %>
-    <%= form.text_field :book_id %>
+    <%= form.collection_select(:book_id, Book.all, :id, :title) %>
+    <!-- :book_idに入れるやつがBook.allのid(value)とtitle(key)みたいな感じ -->
   </div>
 
   <div class="actions">

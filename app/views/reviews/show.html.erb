@@ -12,12 +12,12 @@
 
 <p>
   <strong>Comment:</strong>
-  <%= @review.comment %>
+  <%= simple_format( h(@review.comment) ) %>
 </p>
 
 <p>
   <strong>Book:</strong>
-  <%= @review.book %>
+  <%= @review.book.title %>
 </p>
 
 <%= link_to 'Edit', edit_review_path(@review) %> |
