@@ -21,7 +21,8 @@
       <tr>
         <td>
           <% if book.image.attached? %>
-            <%= image_tag book.image, height: '100', width: '100' %>
+            <%#コメントアウト image_tag book.image, height: '100', width: '100' %>
+            <%= image_tag book.thumbnail %>
           <% end %>
         </td>
         <td><%= book.title %></td>
